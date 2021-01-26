@@ -4,9 +4,9 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 
 RUN apt-get update --fix-missing && \
-    apt-get install -y wget bzip2 ca-certificates libglib2.0-0 git mercurial subversion \
-        software-properties-common gpg libxext6 libsm6 libxrender1 libxcomposite1 libxcursor1 libxss1 libegl1 freeglut3 \
-        basex sudo vis loksh && \
+    apt-get install -y curl wget bzip2 ca-certificates git mercurial subversion \
+        software-properties-common gpg  x11-apps x11-utils sudo vis \
+        libglib2.0-0 libxext6 libsm6 libxrender1 libxcomposite1 libxcursor1 libxss1 libegl1 libasound2 freeglut3 && \
     apt-get clean
 
 RUN useradd -d /althome/rgc -s /bin/bash rgc && \
